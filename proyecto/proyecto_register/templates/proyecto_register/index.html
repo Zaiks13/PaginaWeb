@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static '/css/jquery-ui.min.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static '/css/bootstrap.min.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static '/css/color.css' %}" />
+</head>
+
+<body>
+
+
+    <div class="container py-4" style="width: 78rem;">
+        <div class="card bg-light mb-3">
+            <div class="card-header mb-3 text-white text-center">
+                <h3>Inicio</h3>
+            </div>
+            <nav class="navbar navbar-light bg-light">
+                <div class="container-fluid">
+                    <a class="btn btn-primary btn-xs">Agregar
+                        archivo</a>
+                </div>
+            </nav>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Ver Csv</th>
+                        <th>Nombre</th>
+                        <th>Nombre del Archivo en Carpeta</th>
+                        <th>Editar</th>
+                        <th>Eliminar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!--
+					<tr th:each="csv: ${usuario.csvFiles}">
+						<td><a th:text="${csv.id}" th:href="@{/verCsv/} + ${csv.id}"></a></td>
+						<td th:text="${csv.nombreCsv}"></td>
+						<td th:text="${csv.csv}"></td>
+                    </tr>
+                    -->
+                </tbody>
+            </table>
+
+        </div>
+        {% block content %}
+        {% endblock content %}
+    </div>
+    <script href="{% static '/js/jquery-3.2.1.min.js' %}"></script>
+    <script href="{% static '/js/popper.min.js' %}"></script>
+    <script href="{% static '/js/bootstrap.min.js' %}"></script>
+    <script href="{% static '/js/jquery-ui.min.js' %}"></script>
+</body>
+
+</html>
