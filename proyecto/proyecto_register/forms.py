@@ -11,5 +11,10 @@ class CsvForm(forms.ModelForm):
         fields = '__all__'
 
         labels = {
-            'csv' : 'Archivo .csv'
+            'csv' : 'Archivo .csv',
+            'tienda' : 'Nombre de la Tienda'
         }
+    
+    def __init__(self, *args, **kwargs):
+        super(CsvForm,self).__init__(*args, **kwargs)
+        self.fields['tienda'].empty_label = "Seleccione una tienda"
